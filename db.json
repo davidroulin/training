@@ -3,27 +3,42 @@
     {
       "id": 1,
       "username": "adam",
-      "text": "Hello! This is my first post."
+      "text": "Hello! This is my first post.",
+      "likes": [
+        "paul", "jack"
+      ]
     },
     {
       "id": 2,
       "username": "paul",
-      "text": "Hey @adam check this out: https://www.youtube.com/watch?v=O91DT1pR1ew"
+      "text": "Hey @adam check this out: https://www.youtube.com/watch?v=O91DT1pR1ew",
+      "likes": [
+        "paul"
+      ]
     },
     {
       "id": 3,
       "username": "jack",
-      "text": "What a bunch of losers here. This social network was a mistake."
+      "text": "What a bunch of losers here. This social network was a mistake.",
+      "likes": [
+        "paul", "adam"
+      ]
     }
   ],
   "users": {
     "adam": {
       "joined": "August 1, 2021",
-      "bio": "Just trying this out."
+      "bio": "Just trying this out.",
+      "follows": [
+        "paul"
+      ]
     },
     "paul": {
       "joined": "February 12, 2022",
-      "bio": "Coder. Dad. Entrepreneur."
+      "bio": "Coder. Dad. Entrepreneur.",
+      "follows": [
+        "jack", "adam"
+      ]
     },
     "jack": {
       "joined": "July 3, 2022",
