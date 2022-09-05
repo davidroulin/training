@@ -14,7 +14,7 @@
       "id": 3,
       "username": "jack",
       "text": "What a bunch of losers here. This social network was a mistake."
-    },
+    }
   ],
   "users": {
     "adam": {
@@ -28,6 +28,6 @@
     "jack": {
       "joined": "July 3, 2022",
       "bio": "Just here to troll @adam"
-    },
+    }
   }
 }
