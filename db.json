@@ -7,6 +7,7 @@
       "likes": [
         "paul", "jack"
       ]
+      , "created": "2021-08-01T16:09:44.169Z"
     },
     {
       "id": 2,
@@ -15,6 +16,7 @@
       "likes": [
         "paul"
       ]
+      , "created": "2022-03-12T14:11:23.234Z"
     },
     {
       "id": 3,
@@ -23,26 +25,57 @@
       "likes": [
         "paul", "adam"
       ]
+      , "created": "2022-08-05T05:32:11.391Z"
+    }
+    , {
+      "id": 4,
+      "username": "adam",
+      "text": "You are stupid @paul.",
+      "likes": [
+        "emma", "jack"
+      ]
+      , "created": "2022-04-02T11:05:24.235Z"
+      , "reply_to": 2
+    }
+    , {
+      "id": 5,
+      "username": "emma",
+      "text": "@paul @adam Guys, chill.",
+      "likes": [
+        "jack"
+      ]
+      , "created": "2022-06-03T07:59:45.175Z"
+     , "reply_to": 4 
     }
   ],
   "users": {
     "adam": {
-      "joined": "August 1, 2021",
+      "joined": "2021-08-01T16:01:34.483Z",
       "bio": "Just trying this out.",
       "follows": [
         "paul"
       ]
     },
     "paul": {
-      "joined": "February 12, 2022",
+      "joined": "2022-02-12T15:14:20.567Z",
       "bio": "Coder. Dad. Entrepreneur.",
       "follows": [
         "jack", "adam"
       ]
     },
     "jack": {
-      "joined": "July 3, 2022",
+      "joined": "2022-07-03T09:43:17.168Z",
       "bio": "Just here to troll @adam"
+      , "follows": [
+        "emma"
+      ]
+    }
+    , "emma": {
+      "joined": "2022-06-01T04:12:37.325Z",
+      "bio": "Geek.",
+      "follows": [
+        "paul", "adam"
+      ]
     }
   }
 }
