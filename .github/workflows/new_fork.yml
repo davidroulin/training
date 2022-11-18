@@ -24,6 +24,9 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.TOKEN_POUR_FORK }}
       run: |
-        gh api /repos/davidroulin/training/forks \
+        gh api \
+          --method POST \
+          -H "Accept: application/vnd.github+json" \
+          /repos/davidroulin/training/forks \
           -f name="${{ github.event.inputs.machine_number }}_${{ github.event.inputs.client_name }}_${{ github.event.inputs.case_number }}" \
-          -F default_branch_only=true
+          -F default_branch_only=false
