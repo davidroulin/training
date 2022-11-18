@@ -27,5 +27,5 @@ jobs:
           --method POST \
           -H "Accept: application/vnd.github+json" \
           /repos/davidroulin/training/forks \
-          -f name="training-2-autofork"
-          -f default_branch_only=false
+          -f name="training-2-autofork" \
+          -F default_branch_only=false
