@@ -1,0 +1,28 @@
+name: Création fork
+on:
+  workflow_dispatch:
+    inputs:
+      machine_number:
+        description: 'Numéro machine'
+        default: '000'
+        required: true
+      client_name:
+        description: "Nom client (attention, pas d'espaces)"
+        default: ''
+        required: true
+      case_number:
+        description: 'Numéro affaire'
+        default: 'UN22_'
+        required: true
+
+jobs:
+  fork:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Fork le repository
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        gh api /repos/davidroulin/training/forks \
+          -f name="${{ github.event.inputs.machine_number }}_${{ github.event.inputs.client_name }}_${{ github.event.inputs.case_number }}" \
+          -F default_branch_only=true
