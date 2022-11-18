@@ -22,7 +22,7 @@ jobs:
     steps:
     - name: Fork le repository
       env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_TOKEN: ${{ secrets.TOKEN_POUR_FORK }}
       run: |
         gh api /repos/davidroulin/training/forks \
           -f name="${{ github.event.inputs.machine_number }}_${{ github.event.inputs.client_name }}_${{ github.event.inputs.case_number }}" \
