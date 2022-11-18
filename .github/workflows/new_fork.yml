@@ -17,10 +17,9 @@ on:
 
 jobs:
   fork:
-    permissions: write-all
     runs-on: ubuntu-latest
     steps:
-    - name: Fork le repository
+    - name: Fork le repository en POST
       env:
         GH_TOKEN: ${{ secrets.TOKEN_POUR_FORK }}
       run: |
@@ -28,5 +27,5 @@ jobs:
           --method POST \
           -H "Accept: application/vnd.github+json" \
           /repos/davidroulin/training/forks \
-          -f name="${{ github.event.inputs.machine_number }}_${{ github.event.inputs.client_name }}_${{ github.event.inputs.case_number }}" \
+          -f name="training-2-autofork"
           -F default_branch_only=false
